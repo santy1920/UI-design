@@ -1,0 +1,269 @@
+.topnav {
+    background-color: white;
+   border: 5px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+i {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+input[type="text"]
+{
+    background: transparent;
+    border: none;
+    width: 450px;
+    color: #979ea0;
+}
+
+.a {
+font-family: 'sans-serif';
+font-size: 12px;
+color: #8a8d8e; 
+}
+
+.b {
+font-family: 'Kaushan Script';
+font-size: 18px;
+color: #1370f9;
+}
+.c {
+padding-left: 10px;
+font-size: 14px;
+color: #8a8d8e; 
+}
+.d {
+font-size: 16px;
+}
+button {
+    background: transparent;
+    border: 2px white;
+    float: right; 
+    margin-left: 15px;
+    margin-top: 20px;
+}
+button[type="button1"] {
+    margin: 4px 0.2px;
+    display: block;
+    border: 2px solid #e7e7e7;
+    padding: 8px 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+button[type="button2"] {
+    background: white;
+    margin: 4px 0.2px;
+    display: block;
+    border: 2px solid #e7e7e7;
+    padding: 8px 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+button[type="button3"] {
+    padding-right: 15px;
+  padding-left: 5px;
+  padding-bottom: 20px;
+}
+
+.pic {
+width: 30px; 
+margin-left: 250px;
+}
+.blue {
+width: 40px; 
+}
+
+.center {
+    background-color:#f2f2f2;
+    padding: 30px;
+}
+.button {
+    background-color: #f2f2f2;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 0.2px;
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.btn {
+    margin: 4px 0.2px;
+    margin-right: 300px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #e7e7e7;
+    color: black;
+    background-color: white;
+    padding: 1px 20px ;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+.buton {
+    margin: 4px 0.2px;
+    width: 200px;
+    height: 40px;
+    border: 2px solid #e7e7e7;
+    color: black;
+    background-color: white;
+    padding: 1px 20px ;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.success {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+.info {
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 14px;
+    color: #8a8d8e;
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #2eb6e8;
+  border-radius: 50%;
+  display: inline-block;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row {
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  text-align: center;
+  background-color: white;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 55px;
+  padding-top: 10px;
+}
+.empty-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  text-align: center;
+  background-color: white;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 80px;
+  padding-top: 10px;
+}
+
+.design {
+    color: grey;
+    font-size: 11px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+img.pro-pic {
+width: 70px; 
+}
+.add-pic {
+width: 70px;
+padding-top: 80px; 
+}
+.circular-pic {
+width: 40px;
+float: right;
+padding-top: 40px;
+}
+.graph {
+width: 150px;
+float: left;
+padding-left: 25px;
+padding-top: 20px;
+}
+.line {
+width: 80px;
+float: left;
+padding-left: 25px;
+padding-top: 10px;
+}
+a {
+margin-left: 10px;
+margin-right: 10px;
+color: black;
+}
+button[type="block"] {
+    display: inline-block;
+    width: 40%;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+.circle-icon1 {
+    background: #92b3f4;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 80px;
+    margin-left: 120px;
+}
+.circle-icon2 {
+    background: #ffc0c0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 80px;
+    margin-left: 120px;
+}
+
+.circle-icon3 {
+    background: #f7de71;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 80px;
+    margin-left: 120px;
+}
+.circle-icon4 {
+    background: #97fcf9;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 80px;
+    margin-left: 120px;
+}
+.chart {
+  background: white;
+  width: 300px;
+  height: 100px;
+  padding: 20px 20px;
+}
+
