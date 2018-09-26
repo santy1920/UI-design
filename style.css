@@ -1,93 +1,124 @@
 .topnav {
     background-color: white;
-   border: 5px;
-    padding: 10px;
-    border-radius: 50px;
 }
-
 i {
-  margin-right: 10px;
-  margin-left: 20px;
+  margin-right: 0.7rem;
+  margin-left: 1.2rem;
+  color: #c2cbce;
 }
 input[type="text"]
 {
     background: transparent;
     border: none;
-    width: 450px;
+    width: 29rem;
     color: #979ea0;
 }
-
+.vl {
+    border-left: 0.1rem solid #c2cbce;
+    height: 3rem;
+    position: absolute;
+    right: 3.5%;
+    top: 0;
+}
+.fa {
+  color: #c2cbce;
+  cursor: pointer;
+}
 .a {
 font-family: 'sans-serif';
-font-size: 12px;
+font-size: 0.8rem;
 color: #8a8d8e; 
 }
-
 .b {
 font-family: 'Kaushan Script';
-font-size: 18px;
+font-size: 1.2rem;
 color: #1370f9;
 }
 .c {
-padding-left: 10px;
-font-size: 14px;
+padding-left: 0.7rem;
+font-size: 0.8rem;
 color: #8a8d8e; 
 }
 .d {
-font-size: 16px;
+font-size: 0.9rem;
+}
+.e {
+font-family: 'sans-serif';
+font-size: 0.7rem;
+color: #8a8d8e; 
+margin-left: 0.7rem;
 }
 button {
     background: transparent;
-    border: 2px white;
+    border: 0.1em white;
     float: right; 
-    margin-left: 15px;
-    margin-top: 20px;
+    margin-left: 0.7rem;
 }
+button[type="btn1"] {
+    background: transparent;
+    float: right; 
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+}
+button[type="btn2"] {
+    background: transparent;
+    float: right; 
+    margin-left: 0.6rem;
+    margin-top: 0.5rem;
+}
+
 button[type="button1"] {
-    margin: 4px 0.2px;
+    margin: 0rem;
     display: block;
-    border: 2px solid #e7e7e7;
-    padding: 8px 8px;
-    font-size: 14px;
+    border: 0.1rem solid #e7e7e7;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
     cursor: pointer;
+    margin-top: 0.4rem;
 }
 button[type="button2"] {
     background: white;
-    margin: 4px 0.2px;
+    margin: 0rem;
     display: block;
-    border: 2px solid #e7e7e7;
-    padding: 8px 8px;
-    font-size: 14px;
+    border: 0.1rem solid #e7e7e7;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
     cursor: pointer;
+    margin-top: 0.4rem;
 }
 button[type="button3"] {
-    padding-right: 15px;
-  padding-left: 5px;
-  padding-bottom: 20px;
+    padding-right: 0.8rem;
+    padding-left: 0.5rem;
+    margin-top: 0.9rem;
 }
 
 .pic {
-width: 30px; 
-margin-left: 250px;
+width: 2rem;
+height: 2.2rem; 
+margin-left: 21rem;
+margin-bottom: 0.5rem;
+vertical-align: middle;
 }
 .blue {
-width: 40px; 
+width: 2.5rem; 
+vertical-align: middle;
+margin-top: 0.4rem;
 }
 
 .center {
     background-color:#f2f2f2;
-    padding: 30px;
+    padding: 0.7rem;
 }
 .button {
     background-color: #f2f2f2;
     color: black;
-    border: 2px solid #e7e7e7;
-    padding: 15px 15px;
+    border: 0.1rem solid #e7e7e7;
+    padding: 0.9rem 0.9rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 0.2px;
+    font-size: 1rem;
+    margin: 0.1rem 0.05rem;
     cursor: pointer;
 }
 
@@ -96,27 +127,26 @@ width: 40px;
     cursor: not-allowed;
 }
 .btn {
-    margin: 4px 0.2px;
-    margin-right: 300px;
-    width: 200px;
-    height: 40px;
-    border: 1px solid #e7e7e7;
+    margin: 0rem;
+    margin-right: 20.5rem;
+    width: 12rem;
+    height: 2.5rem;
+    border: 0.1rem solid #e7e7e7;
     color: black;
     background-color: white;
-    padding: 1px 20px ;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     display: inline-block;
 }
 .buton {
-    margin: 4px 0.2px;
-    width: 200px;
-    height: 40px;
-    border: 2px solid #e7e7e7;
+    margin: 0rem;
+    margin-bottom: 0.2rem;
+    width: 12rem;
+    height: 2.5rem;
+    border: 0.1rem solid #e7e7e7;
     color: black;
     background-color: white;
-    padding: 1px 20px ;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     display: inline-block;
 }
@@ -124,20 +154,46 @@ width: 40px;
 .success {
     background-color: white;
     color: black;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 .info {
     background-color: #f2f2f2;
     color: black;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #8a8d8e;
 }
 .dot {
-  height: 5px;
-  width: 5px;
+  height: 8px;
+  width: 8px;
   background-color: #2eb6e8;
-  border-radius: 50%;
+  border-radius: 60%;
   display: inline-block;
+  margin-bottom: 12px;
+  position: relative;
+  left: -7px;
+  top: 2px;
+}
+.dot1 {
+  height: 8px;
+  width: 8px;
+  background-color: #2eb6e8;
+  border-radius: 60%;
+  display: inline-block;
+  position: relative;
+  left: -68px;
+  top: -13px;
+}
+.dot2 {
+  height: 8px;
+  width: 8px;
+  background-color: #2eb6e8;
+  border-radius: 60%;
+  float: left;
+  display: inline-block;
+  margin-left: 185px;
+  position: relative;
+  left: -60px;
+  top: -18px;
 }
 * {
   box-sizing: border-box;
@@ -150,11 +206,12 @@ body {
 .column {
   float: left;
   width: 25%;
-  padding: 0 10px;
+  padding: 0.5rem 0.5rem;
 }
 
 .row {
-  margin: 0 -5px;
+  margin: 0 -0.2rem;
+  background-color: #f2f2f2;  
 }
 
 .row:after {
@@ -164,22 +221,18 @@ body {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2); 
   text-align: center;
   background-color: white;
-  padding-right: 0px;
-  padding-left: 0px;
-  padding-bottom: 55px;
-  padding-top: 10px;
+  padding-bottom: 3.2rem;
+  padding-top: 0.8rem;
 }
 .empty-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2); 
   text-align: center;
   background-color: white;
-  padding-right: 0px;
-  padding-left: 0px;
-  padding-bottom: 80px;
-  padding-top: 10px;
+  padding-bottom: 5rem;
+  padding-top: 0.8rem;
 }
 
 .design {
@@ -196,9 +249,9 @@ width: 70px;
 padding-top: 80px; 
 }
 .circular-pic {
-width: 40px;
+width: 35px;
 float: right;
-padding-top: 40px;
+padding-top: 60px;
 }
 .graph {
 width: 150px;
@@ -206,8 +259,13 @@ float: left;
 padding-left: 25px;
 padding-top: 20px;
 }
+.graph1 {
+width: 150px;
+float: left;
+padding-left: 25px;
+}
 .line {
-width: 80px;
+width: 150px;
 float: left;
 padding-left: 25px;
 padding-top: 10px;
@@ -228,36 +286,36 @@ button[type="block"] {
     text-align: center;
 }
 .circle-icon1 {
-    background: #92b3f4;
-    width: 70px;
-    height: 70px;
+    background: #c5d9f9;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
-    line-height: 80px;
+    line-height: 73px;
     margin-left: 120px;
 }
 .circle-icon2 {
-    background: #ffc0c0;
-    width: 70px;
-    height: 70px;
+    background: #fcd1d1;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
-    line-height: 80px;
+    line-height: 73px;
     margin-left: 120px;
 }
 
 .circle-icon3 {
-    background: #f7de71;
-    width: 70px;
-    height: 70px;
+    background: #fff2c9;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
-    line-height: 80px;
+    line-height: 73px;
     margin-left: 120px;
 }
 .circle-icon4 {
-    background: #97fcf9;
-    width: 70px;
-    height: 70px;
+    background: #ccfcdd;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
-    line-height: 80px;
+    line-height: 73px;
     margin-left: 120px;
 }
 .chart {
