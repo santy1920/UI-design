@@ -13,8 +13,8 @@ input[type="text"]
     width: 29rem;
     color: #979ea0;
 }
-.vl {
-    border-left: 0.1rem solid #c2cbce;
+.vertical-line {
+    border-left: 0.05rem solid #c2cbce;
     height: 3rem;
     position: absolute;
     right: 3.5%;
@@ -324,4 +324,93 @@ button[type="block"] {
   height: 100px;
   padding: 20px 20px;
 }
+@media screen and (max-width: 768px) {
+    [class*="column"] {
+        width: 50%;
+    }
+    .btn {
+        margin-right: 4.2rem;
+    }
+    input[type="text"] {
+        width: 12rem;
+    }
+    .pic {
+        margin-left: 7rem;
+    }
+    .vertical-line {
+        right: 5%; 
+    }
+}
+@media screen and (max-width: 320px) {
+    [class*="column"] {
+        width: 100%;
+    }
+input[type="text"] {
+    background: transparent;
+    border: none;
+    width: 120px;
+    color: #979ea0;
+}
+i {
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #c2cbce;
+  margin-bottom: 10px;
+}
+.pic {
+width: 2rem;
+height: 2.2rem; 
+margin-left: 0.5rem;
+margin-bottom: 0.5rem;
+vertical-align: middle;
+}
+.blue {
+    width: 2.5rem; 
+    vertical-align: middle;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    }
+button[type="block"] {
+    display: inline-block;
+    width: 30%;
+    margin-left: 5px;
+    margin-right: 35px;
+    padding: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+button {
+    background: transparent;
+    border: 0.1em white;
+    float: right; 
+    margin-left: 0.7rem;
+}
+.btn {
+    margin-right: 2.5rem;
+    width: 6rem;
+    height: 2rem;
+    border: 0.1rem solid #e7e7e7;
+    color: black;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: inline-block;
+}
+.buton {
+    margin-bottom: 0.2rem;
+    width: 6rem;
+    height: 2rem;
+    border: 0.1rem solid #e7e7e7;
+    color: black;
+    background-color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: inline-block;
+}
+.d {
+    font-size: 0.8rem;
+    }
+}
+
+
 
