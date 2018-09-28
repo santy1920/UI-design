@@ -341,14 +341,14 @@ button[type="block"] {
         right: 5%; 
     }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     [class*="column"] {
         width: 100%;
     }
 input[type="text"] {
     background: transparent;
     border: none;
-    width: 120px;
+    width: 14rem;
     color: #979ea0;
 }
 i {
@@ -387,7 +387,7 @@ button {
     margin-left: 0.7rem;
 }
 .btn {
-    margin-right: 2.5rem;
+    margin-right: 5.7rem;
     width: 6rem;
     height: 2rem;
     border: 0.1rem solid #e7e7e7;
@@ -409,7 +409,33 @@ button {
 }
 .d {
     font-size: 0.8rem;
-    }
+}
+.vertical-line {
+    border-left: 0.05rem solid #c2cbce;
+    height: 2.8rem;
+    position: absolute;
+    right: 9.5%;
+    top: 2.5rem;
+}
+.dot2 {
+    margin-left: 223px;
+}
+.circle-icon1 {
+    margin-left: 160px;
+}
+.circle-icon2 {
+    margin-left: 160px;
+}
+
+.circle-icon3 {   
+    margin-left: 160px;
+}
+.circle-icon4 {
+    margin-left: 160px;
+}
+button[type="block"] {
+    margin-right: 40px;
+}    
 }
 
 
