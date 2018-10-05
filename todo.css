@@ -1,0 +1,106 @@
+body {
+  font-family: sans-serif;
+}
+
+.topnav {
+  background-color: #1879d2;
+  display: flex;
+  height: 40px;
+  width: auto;
+}
+.topnav .center-topnav {
+  text-align: center;
+  padding-top: 5px;
+}
+.topnav .center-topnav .search {
+  color: #1879d2;
+  float: left;
+  height: 31px;
+  padding: 0px 10px;
+  background: #cfe4f9;
+  border: none;
+  cursor: pointer;
+}
+.topnav .center-topnav input[type=text] {
+  background-color: #cfe4f9;
+  border-color: transparent;
+  width: 20rem;
+  height: 25px;
+}
+.topnav .left-topnav {
+  float: left;
+  margin-left: 5px;
+  margin-top: 12px;
+  width: 40%;
+}
+.topnav .left-topnav .todo {
+  color: white;
+}
+
+.sidebar {
+  height: 100%;
+  margin-top: 48px;
+  margin-left: 8px;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+}
+.sidebar .icon {
+  background: transparent;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.sidebar .sidebar-font {
+  color: #3b3b3b;
+  font-size: 12px;
+}
+.sidebar .bars {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.sidebar .menu {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.sidebar .list {
+  margin-top: 30px;
+}
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+.sidebar .list-font {
+  color: #1370f9;
+  font-size: 12px;
+}
+
+.content {
+  width: 80%;
+  margin-left: 22%;
+  margin-top: 2%;
+  display: flex;
+}
+
+.left-content {
+  float: left;
+  width: 50%;
+}
+
+.right-content {
+  float: right;
+  width: 50%;
+}
+
+.my-list {
+  color: #054997;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=todo.css.map */
