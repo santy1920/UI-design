@@ -1,0 +1,197 @@
+body {
+    font-family: sans-serif;
+}
+.topnav {
+    background-color: rgb(24, 121, 210);
+    display: flex;
+    height: 40px;
+    width: auto;
+
+   .center-topnav {
+        text-align: center;
+        padding-top: 5px;
+        .search {
+            color: rgb(24, 121, 210);
+            float: left;
+            height: 31px;
+            padding: 0px 10px;
+            background: #cfe4f9;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="text"] {
+            background-color: #cfe4f9;
+            border-color: transparent;
+            width: 20rem;
+            height: 25px;
+        }
+    }
+    .left-topnav {
+        float: left;
+        margin-left: 5px;
+        margin-top: 12px;
+        width: 40%;
+        .todo {
+            color: white; 
+        }
+    }
+}
+.container {
+    display: flex;
+}
+    
+.left-sidebar {
+    flex: 0 20%;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+    height: -webkit-fill-available;
+    .icon {
+        background: transparent;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    .left-sidebar-font {
+        color: #3b3b3b;
+        font-size: 12px;
+    }
+    .bars {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .menu {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .list {
+        margin-top: 30px;
+    }
+    a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+    }
+    .list-font {
+        color: #1370f9;
+        font-size: 12px;
+    }
+}
+
+.flex-grid {
+    display: flex;
+    flex: 1;
+}
+.content {
+    flex: 0 60%;
+    .left-content {
+        float: left;
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+    .my-list {
+        color: #054997;
+        font-size: 16px;
+    }
+    .right-content {
+        float: right;
+        margin-right: 2%;
+        margin-top: 2%;
+    }
+    .icon {
+        background: transparent;
+        margin-right: 5px;
+        vertical-align: middle;
+        color: #054997;
+    }
+} 
+.block {
+    width: 200px;
+    height: 200px;
+    background-color: #1370f9;
+}
+.add-task {
+    text-align: center;
+}
+.right-sidebar {
+    flex: 0 20%;
+    background-color: #f3f3f3;
+    overflow: hidden;
+    a {
+        padding: 12px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+    }
+    .menu {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .icon {
+        background: transparent;
+        margin-right: 5px;
+        vertical-align: middle;
+        color: #818181;
+    }
+    .right-sidebar-buttons-font {
+        color: #7c7777;
+        font-size: 12px;
+    }
+    .right-sidebar-font {
+        color: #000000;
+        font-size: 14px;
+        vertical-align: center;
+    }
+    .description {
+        width: 15rem;
+        height: 6rem;
+        background-color: white;
+        margin: 7px;
+    }
+    .add-to-day {
+        width: 15rem;
+        height: 3rem;
+        background-color: white;
+        margin: 7px;
+    }
+    .options {
+        width: 15rem;
+        height: 9rem;
+        background-color: white;
+        margin: 7px;
+    }
+    .note {
+        width: 15rem;
+        height: 4rem;
+        background-color: white;
+        margin: 7px;
+    }
+    .bottom-line {
+        width: 15rem;
+        height: 2rem;
+        background-color: white;
+        margin: 7px;
+        position: relative;
+        top: 160px;
+    }
+    .fa-circle-o {
+        color: #1370f9;
+    }
+    .fa-trash {
+        float: right;
+    }
+    .fa-arrow-circle-left {
+        float: left;
+    }
+    .fa-star-o {
+        float:right;
+        position: relative;
+        top: -70px;
+    }
+    .bottom-content {
+        padding-left: 6px;
+        padding-top: 6px;
+        text-align: center;
+    }
+}
