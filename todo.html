@@ -37,13 +37,17 @@
   <div class="list">
     <a href="#"><i class="icon fa fa-list-ul"></i> <font class= "list-font">My List</font></a>
   </div>
-  <div class="menu">
-      <a href="#"><i class="icon fa fa-plus"></i> <font class= "list-font">New list</font></a>
+  <div class="new-menu">
+    <div class="my-list">
+    </div>
   </div>
-</div>
+      <a href="#"><i class="icon fa fa-plus"></i> 
+        <input type="text" class="list-input display-none">
+        <font class= "list-font display-inline">New list</font></a>
+  </div>
 
 <div class="content">
-  
+  <div class="content-header">
   <div class="left-content">
       <font class="my-list">My List</font>
       <a href="#"><i class="icon fa fa-ellipsis-h"></i></a>
@@ -52,11 +56,23 @@
     <a href="#"><i class="icon fa fa-exchange fa-rotate-90"></i></a>
     <font class="my-list">Sort</font>
   </div>
-  <div class="add-task">
-      <a href="#"><i class="icon fa fa-plus"></i></a> <font class= "list-font">Add a Task</font>
-  </div>
 </div>
-
+  <div class="task-list">
+      <div class="add-new-task">
+          <i class="fa fa-circle pointer" aria-hidden="true"></i>
+          <span> Add a Task </span>
+      </div>  
+      <div class="add-task display-none">
+          <a> <i class="fa fa-circle-o color"></i>
+          <input type="text" class="task-input" required placeholder="Add a task" autofocus>
+          <button class="starred change-color">ADD</button>
+          </a>
+      </div>
+      <div class="new-task">
+      </div>
+  </div>
+      
+</div>
 
 <div class="right-sidebar">
 <div class="description">
@@ -89,12 +105,6 @@
       <i class="icon fa fa-trash"></i>
     </div>
     </div>
-
-    <div id="block" class="block">
-        <div class="block-2">
-            <input type="text" placeholder="Search..">
-          </div>
-     </div>
 
   </div>
 <script type="text/javascript" src="todo.js"></script>
