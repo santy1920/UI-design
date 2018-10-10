@@ -96,6 +96,15 @@ body {
         color: #1370f9;
         font-size: 12px;
     }
+    .my-list {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
 
 .flex-grid {
@@ -109,10 +118,14 @@ body {
         margin-left: 2%;
         margin-top: 2%;
     }
-    .my-list {
+    .mylist {
         color: #054997;
         font-size: 16px;
     }
+    .list {
+        color: #054997;
+        font-size: 16px;
+    } 
     .right-content {
         float: right;
         margin-right: 2%;
@@ -125,12 +138,18 @@ body {
         color: #054997;
     }
     .content-header {
-        width: 47rem;
+        width: 65rem;
         height: 4rem;
     }
-    
+    .fa-star {
+        float: right;
+    }
+    .task-detail {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
 } 
-.add-new-task, .add-task, .new-task {
+.add-new-task, .add-task, .new-task, .menu {
     margin-left: 20px;
     margin-top: 10px;
 }
@@ -138,6 +157,19 @@ body {
     width: 47rem;
     height: 2rem;
     display: block;
+    padding: 10px;
+}
+.button {
+    border: none;
+}
+.task-input {
+    background: transparent;
+    border: none;
+}
+.starred {
+    background: transparent;
+    border: none;
+    float: right;
 }
 .right-sidebar {
     flex: 0 20%;
