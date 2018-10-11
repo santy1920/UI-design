@@ -149,7 +149,7 @@ body {
   width: 65rem;
   height: 4rem;
 }
-.content .fa-star {
+.content .fa-star-o, .content .fa-star {
   float: right;
 }
 .content .task-detail {
@@ -169,13 +169,20 @@ body {
   padding: 10px;
 }
 
-.button {
+.button1 {
   border: none;
+  outline: none;
+}
+
+.button2 {
+  border: none;
+  outline: none;
 }
 
 .task-input {
   background: transparent;
   border: none;
+  outline: none;
 }
 
 .starred {
@@ -199,6 +206,11 @@ body {
 .right-sidebar .menu {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.right-sidebar .due-date {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
 }
 .right-sidebar .icon {
   background: transparent;
@@ -255,11 +267,6 @@ body {
 }
 .right-sidebar .fa-arrow-circle-left {
   float: left;
-}
-.right-sidebar .fa-star-o {
-  float: right;
-  position: relative;
-  top: -70px;
 }
 .right-sidebar .bottom-content {
   padding-left: 6px;
