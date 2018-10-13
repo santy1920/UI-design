@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    margin: 0px; 
 }
 .box-shadow{
     box-shadow: 0px 1px #E4E4E4;
@@ -32,6 +33,7 @@ body {
             padding: 0px 10px;
             background: #cfe4f9;
             border: none;
+            outline: none;
             cursor: pointer;
         }
         input[type="text"] {
@@ -48,6 +50,9 @@ body {
         width: 40%;
         .todo {
             color: white; 
+            margin-left: 5px;
+            font-weight: 600;
+            font-size: 15px; 
         }
     }
 }
@@ -59,15 +64,16 @@ body {
     flex: 0 20%;
     background-color: #f3f3f3;
     overflow-x: hidden;
-    height: -webkit-fill-available;
+    height: 36rem;
     .icon {
         background: transparent;
         margin-right: 5px;
         vertical-align: middle;
+        font-size: 16px;
     }
     .left-sidebar-font {
         color: #3b3b3b;
-        font-size: 12px;
+        font-size: 14px;
     }
     .bars {
         margin-top: 20px;
@@ -80,7 +86,6 @@ body {
     .new-menu {
         margin-top: 5px;
         margin-bottom: 10px;
-        margin-left: 15px; 
     }
     .list {
         margin-top: 30px;
@@ -94,7 +99,8 @@ body {
     }
     .list-font {
         color: #1370f9;
-        font-size: 12px;
+        font-size: 14px;
+        margin-left: 6px;
     }
     .my-list {
         padding: 6px 8px 6px 16px;
@@ -104,6 +110,13 @@ body {
         display: block;
         margin-top: 5px;
         margin-bottom: 5px;
+    }
+    .list-input {
+        border: 1px solid #e6e3e3;
+        outline: none;
+        background: transparent;
+        width: 10rem;
+        height: 2rem;
     }
 }
 
@@ -118,13 +131,19 @@ body {
         margin-left: 2%;
         margin-top: 2%;
     }
+    .list-font {
+        color: #1370f9;
+        font-size: 14px;
+    }
     .mylist {
-        color: #054997;
+        color: #1370f9;
         font-size: 16px;
+        font-weight: 600;
+        margin-right: 8px;
     }
     .list {
-        color: #054997;
-        font-size: 16px;
+        color: #1370f9;
+        font-size: 14px;
     } 
     .right-content {
         float: right;
@@ -145,19 +164,39 @@ body {
         float: right;
     }
     .task-detail {
-        margin-left: 20px;
-        margin-top: 10px;
+        margin-left: 4px;
+        margin-top: 15px;
+        height: 2rem;
+        border-bottom: 1px solid #e6e3e3;
+        display: block;
+    }
+    .fa-circle-o, .fa-plus {
+        color: #1370f9;
+        margin-right: 8px;
+    }
+    .add-button {
+        border: none;
+        outline: none;
+        background: transparent;
+        float: right;
+    }
+    .add-font {
+        color: #1370f9;
+        font-size: 12px;
+        font-weight: 600;
     }
 } 
-.add-new-task, .add-task, .new-task, .menu {
+.add-new-task, .add-task, .new-task {
     margin-left: 20px;
     margin-top: 10px;
 }
 .task-list {
-    width: 47rem;
+    width: 64rem;
     height: 2rem;
     display: block;
     padding: 10px;
+    padding-top: 20px;
+    border-bottom: 1px solid #e6e3e3;
 }
 .button1 {
     border: none;
@@ -171,13 +210,14 @@ body {
     background: transparent;
     border: none;
     outline: none;
-
+    width: 42rem;
 }
 .starred {
     background: transparent;
     border: none;
     float: right;
 }
+
 .right-sidebar {
     flex: 0 20%;
     background-color: #f3f3f3;
@@ -196,7 +236,6 @@ body {
     .due-date {
         margin-top: 5px;
         margin-bottom: 5px;
-        margin-left: 20px;
     }
     .icon {
         background: transparent;
@@ -245,8 +284,9 @@ body {
         position: relative;
         top: 160px;
     }
-    .fa-circle-o {
+    .fa-circle-o, .fa-plus {
         color: #1370f9;
+        margin-right: 5px;
     }
     .fa-trash {
         float: right;
@@ -258,5 +298,8 @@ body {
         padding-left: 6px;
         padding-top: 6px;
         text-align: center;
+    }
+    .text-area {
+        resize: none;
     }
 }
