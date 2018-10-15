@@ -1,75 +1,75 @@
 var todolists: List[] = [];
 var listId: number = 0;
 var taskId: number = 0;
-var doc = document;
+const doc = document;
 
 class List {
     private name: String;
     private id: Number;
-    private tasks: Task[];
+    private tasks: Task[] = [];
 
     public getId() : Number {
         return this.id;
     }
-    public setId(id: Number) {
+    public setId(id: Number) : void {
         this.id = id;
     }
     public getName() : String {
         return this.name;
     }
-    public setName(name: String) {
+    public setName(name: String) : void {
         this.name = name;
     }
     public getTasks() : Task[] {
         return this.tasks;
     }
-    public setTasks(tasks: Task[]) {
+    public setTasks(tasks: Task[]) : void {
         this.tasks = tasks;
     }
 }
 
 class Task {
-    private id: Number;
+    private id: String;
     private name: String;
     private isSelected: Boolean = false;
     private isImportant: Boolean = false;
-    private note: String;
-    private dueDate: String;
+    private note: String = null;
+    private dueDate: String = null;
 
-    public getId() : Number {
+    public getId() : String {
         return this.id;
     }
-    public setId(id: Number) {
+    public setId(id: String) : void {
         this.id = id;
     }
     public getName() : String {
         return this.name;
     }
-    public setName(name: String) {
+    public setName(name: String) : void {
         this.name = name;
     }
     public getIsSelected() : Boolean {
         return this.isSelected;
     }
-    public setIsSelected(isSelected: Boolean) {
+    public setIsSelected(isSelected: Boolean) : void {
         this.isSelected = isSelected;
     }
     public getIsImportant() : Boolean {
         return this.isImportant;
     }
-    public setIsImportant(isImportant: Boolean) {
+    public setIsImportant(isImportant: Boolean) : void {
         this.isImportant = isImportant;
     }
     public getNote() : String {
         return this.note;
     }
-    public setNote(note: String) {
+    public setNote(note: String) : void {
         this.note = note;
     }
     public getDueDate() : String {
         return this.dueDate;
     }
-    public setDueDate(dueDate: String) {
+    public setDueDate(dueDate: String) : void {
         this.dueDate = dueDate;
     }
 }
@@ -126,10 +126,10 @@ function closeLeftSideBar() : void {
     if (left_sidebar.style.display != 'none') {
         left_sidebar.style.flex = '0 5%';
         for (var index = 0; index < 4; index++) {
-            doc.getElementsByClassName("left-sidebar-font")[index].style.display = 'none';
+            (<HTMLInputElement>doc.getElementsByClassName("left-sidebar-font")[index]).style.display = 'none';
         }
         for (var index=0; index < todolists.length; index++) {
-            doc.getElementsByClassName("list-font")[index].style.display = 'none';
+            (<HTMLInputElement>doc.getElementsByClassName("list-font")[index]).style.display = 'none';
         }
         getElementsByClassName("content").style.flex = '0 80%';
         getElementsByClassName("create-list").classList.add("display-none");
@@ -138,10 +138,10 @@ function closeLeftSideBar() : void {
 function openLeftSideBar() : void {
     var left_sidebar = getElementsByClassName("left-sidebar");
     for (var index = 0; index < 4; index++) {
-        doc.getElementsByClassName("left-sidebar-font")[index].style.display = 'inline';
+        (<HTMLInputElement>doc.getElementsByClassName("left-sidebar-font")[index]).style.display = 'inline';
     }
     for (var index=0 ;index < todolists.length; index++) {
-        doc.getElementsByClassName("list-font")[index].style.display = 'inline';
+        (<HTMLInputElement>doc.getElementsByClassName("list-font")[index]).style.display = 'inline';
     }
     getElementsByClassName("create-list").classList.remove("display-none");
     getElementsByClassName("content").style.flex = '0 60%';
@@ -174,13 +174,13 @@ function createNewTask() : void {
 }
 
 function addNewList() : void {
-    var list = new List();
+    var list:List = new List();
     list.setId(++listId);
     var name = getElementsByClassName("list-input").value;
     list.setName(name);
     todolists.push(list);
     var parent = getElementsByClassName("new-menu");
-    var newListValue = createElement({ name: 'div', attribute: { class: 'my-list', id: list.getId() } });
+    var newListValue:HTMLElement = createElement({ name: 'div', attribute: { class: 'my-list', id: list.getId() } });
     var value = getElementsByClassName("list-input").value;
     var childi = createElement('i');
     var childfont = createElement('font');
@@ -198,7 +198,7 @@ function addNewList() : void {
 
 function addNewTask(event) : void {
     var task = new Task();
-    task.setId(++taskId);
+    task.setId("task" + ++taskId);
     var name = getElementsByClassName("task-input").value;
     task.setName(name);
     var listId;
@@ -209,7 +209,7 @@ function addNewTask(event) : void {
             list = (todolists[index]);
         }
     }
-    list.tasks.push(task);
+    list.getTasks().push(task);
     getElementsByClassName("new-task").id = listId;
     var value = getElementsByClassName("task-input").value;
     var oldtask = getElementsByClassName("new-task");
@@ -260,20 +260,21 @@ function showTask(event) : void {
         if(!task.isSelected){
             select = 'button1 icon fa fa-circle-o pointer';
             } else {
-            select='button1 icon fa fa-circle pointer';
+            select='button1 icon fa fa-check-circle pointer';
         }
         if(!task.isImportant) {
             star = 'button2 icon fa fa-star-o';
         } else {
             star = 'button2 icon fa fa-star';
         } 
-        getElementsByClassName("new-task").innerHTML += "<div class='task-detail' id=" + task.id + "><button class='" + select + "'></button><span class='taskContent'>" + task.name + "</span><button class='" + star + "'></button></div>";
+        getElementsByClassName("new-task").innerHTML += "<div class='task-detail' id=" + task.id + "><button class='" + select + "'></button><span class='task-content'>" + task.name + "</span><button class='" + star + "'></button></div>";
     });
     for (index=0 ; index < list.tasks.length; index++) {
-        doc.getElementsByClassName("task-detail")[index].addEventListener("click", showRightContent);
-        doc.getElementsByClassName("fa-circle-o")[index].addEventListener("click", selectTask);
-        doc.getElementsByClassName("fa-star-o")[index].addEventListener("click", starTask);
+        doc.getElementsByClassName("task-content")[index].addEventListener("click", showRightContent);
+        doc.getElementsByClassName("button1")[index].addEventListener("click", selectTask);
+        doc.getElementsByClassName("button2")[index].addEventListener("click", starTask);
     }
+    closeRightSideBar();
 }
 
 function selectTask(event) : void {
@@ -294,16 +295,15 @@ function selectTask(event) : void {
     if(task.isSelected === false) {
     task.isSelected = true;
     var task1 = doc.getElementById(task.id);
-    task1.firstChild.classList.replace("fa-circle-o", "fa-check-circle");
+    (<HTMLElement>task1.firstChild).classList.replace("fa-circle-o", "fa-check-circle");
     getElementsByClassName("description").innerHTML = "<div class='desc' id=" + task.id + "><button class='button1 icon fa fa-check-circle pointer'></button><span class='right-sidebar-font'>" + task.name + "</span><button class='button2 icon fa fa-star-o pointer'></button></div>";
     } else {
     task.isSelected = false;
     var task2 = doc.getElementById(task.id);
-    task2.firstChild.classList.replace("fa-check-circle", "fa-circle-o");
+    (<HTMLElement>task2.firstChild).classList.replace("fa-check-circle", "fa-circle-o");
     getElementsByClassName("description").innerHTML = "<div class='desc' id=" + task.id + "><button class='button1 icon fa fa-circle-o pointer'></button><span class='right-sidebar-font'>" + task.name + "</span><button class='button2 icon fa fa-star-o pointer'></button></div>";    
     }
     getElementsByClassName("note").innerHTML = "<textarea class='text-area'>" + task.note + "</textarea>";
-    getElementsByClassName("date").innerHTML = "<input type='date' class='date'>" + task.date + "</input>";
 }
 
 function starTask(event) : void {
@@ -330,12 +330,12 @@ function starTask(event) : void {
     if(task.isImportant === false) {
         task.isImportant = true;
         var task1 = doc.getElementById(task.id);
-        task1.lastChild.classList.replace("fa-star-o", "fa-star");
+        (<HTMLElement>task1.lastChild).classList.replace("fa-star-o", "fa-star");
         getElementsByClassName("description").innerHTML = "<div class='desc' id=" + task.id + "><button class='" + select + "'></button><span class='right-sidebar-font'>" + task.name + "</span><button class='button2 icon fa fa-star pointer'></button></div>";
     } else {
         task.isImportant = false;
         var task2 = doc.getElementById(task.id);
-        task2.lastChild.classList.replace("fa-star", "fa-star-o");
+        (<HTMLElement>task2.lastChild).classList.replace("fa-star", "fa-star-o");
         getElementsByClassName("description").innerHTML = "<div class='desc' id=" + task.id + "><button class='" + select + "'></button><span class='right-sidebar-font'>" + task.name + "</span><button class='button2 icon fa fa-star-o pointer'></button></div>";
     }
 }
@@ -358,6 +358,8 @@ function showRightContent(event) : void {
     }
     getElementsByClassName("right-sidebar-font").innerHTML = (task.name);
     getElementsByClassName("right-sidebar").id = (task.id);
+    getElementsByClassName("note").innerHTML = "<textarea class='text-area'>" + task.note + "</textarea>";
+    getElementsByClassName("date").innerHTML = "<input type='date' class='date'>" + task.date;
 }
 
 function showTaskDescription(event) : void {
@@ -382,7 +384,7 @@ function showTaskDescription(event) : void {
 
 function deleteTask() : void {
     var taskId = getElementsByClassName("right-sidebar").id;
-    listId = getElementsByClassName("new-task").id;
+    var listId = getElementsByClassName("new-task").id;
     var list;
     for (var index = 0; index < todolists.length; index++) {
         if (listId == todolists[index].getId()) {
@@ -413,7 +415,7 @@ function deleteTask() : void {
         if(!task.isSelected){
             select = 'button1 icon fa fa-circle-o pointer';
             } else {
-            select='button1 icon fa fa-circle pointer';
+            select='button1 icon fa fa-check-circle pointer';
         }
         if(!task.isImportant) {
             star = 'button2 icon fa fa-star-o';
@@ -422,7 +424,7 @@ function deleteTask() : void {
         } 
         getElementsByClassName("new-task").innerHTML += "<div class='task-detail' id=" + task.id + "><button class='" + select + "'></button><span class='taskContent'>" + task.name + "</span><button class='" + star + "'></button></div>";
     });
-    
+    closeRightSideBar();
 }
 
 function deleteList() : void {
@@ -436,20 +438,20 @@ function deleteList() : void {
 
 function addNote() : void {
     var taskId = getElementsByClassName("right-sidebar").id;
-    listId = getElementsByClassName("new-task").id;
+    var listId = getElementsByClassName("new-task").id;
     var list;
+    var task;
     for (var index = 0; index < todolists.length; index++) {
         if (listId == todolists[index].getId()) {
             list = (todolists[index]);
         }
     }
     for (index = 0; index < list.tasks.length; index++) {
-        if (taskId == list.tasks[index].id) {
-            var task = list.tasks[index];
+        if (taskId == list.tasks[index].getId()) {
+            task = list.tasks[index];
         }
     }
     task.note = getElementsByClassName("text-area").value;
-
 }
 
 function selectDueDate() : void {
